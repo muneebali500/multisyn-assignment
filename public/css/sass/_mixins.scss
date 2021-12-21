@@ -1,0 +1,26 @@
+@mixin flex-center($flexDirection: "row") {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin dropDownBtn {
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  flex: 1;
+  text-align: right;
+}
+
+@mixin latest-sales-data-style {
+  border-radius: 5px;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+}

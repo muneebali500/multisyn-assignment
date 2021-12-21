@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body {
+  display: flex;
+}
+
+.right {
+  width: 100%;
+
+  main {
+    height: 100%;
+    background: #f5f7fb;
+    padding: 2rem 4rem;
+
+    .section-center {
+      margin: 3rem 0;
+    }
+
+    .section-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

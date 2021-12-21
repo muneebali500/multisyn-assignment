@@ -1,0 +1,189 @@
+@import "./_mixins.scss";
+
+.latest-sales {
+  width: 81rem;
+  height: 50rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  padding: 4rem 0;
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 0 3rem;
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #1f4173;
+    }
+
+    div {
+      h3 {
+        display: inline;
+
+        font-size: 1.4rem;
+        color: #5f728d;
+        margin-right: 1rem;
+      }
+
+      button {
+        @include dropDownBtn;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-bottom: 3.5rem;
+
+    form {
+      width: 30rem;
+      height: 3.7rem;
+
+      label {
+        font-weight: normal;
+        font-size: 13px;
+        color: #717a8a;
+        position: relative;
+        top: -0.5rem;
+      }
+
+      .input-group {
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+
+        input {
+          width: 95%;
+          background-color: transparent;
+          border: none;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+
+    &-check {
+      button {
+        height: 3.7rem;
+        width: 5.7rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin-left: 1.5rem;
+        border-radius: 5px;
+
+        &:nth-child(1) {
+          background-color: #1f417310;
+        }
+      }
+    }
+  }
+
+  &__details {
+    & > * {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 3rem;
+      padding: 1rem 0;
+    }
+
+    & > *:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &-heading {
+      h4 {
+        flex: 1;
+        text-align: center;
+        font-size: 1.1rem;
+        color: #1f4173;
+      }
+    }
+
+    &-data {
+      span {
+        flex: 1;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .orderId {
+        color: blue;
+      }
+
+      .total {
+        strong {
+          display: inline-block;
+          width: 6rem;
+          text-align: left;
+          margin-left: 1rem;
+          opacity: 0.8;
+        }
+      }
+
+      &:nth-child(2) span:nth-child(3) {
+        background: #003ad210;
+        color: blue;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(2) span:nth-child(4) {
+        @include latest-sales-data-style;
+        background: #16c35b20;
+        color: #16c35b;
+      }
+
+      &:nth-child(3) span:nth-child(3) {
+        background: #e8000020;
+        color: #e80000;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(3) span:nth-child(4) {
+        background: #7000ff20;
+        color: #7000ff;
+        font-weight: 500;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(4) span:nth-child(3) {
+        background: #24bdc720;
+        color: #24bdc7;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(4) span:nth-child(4) {
+        background: #00000020;
+        color: #00000090;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(5) span:nth-child(3) {
+        background: #ff990020;
+        color: #ff9900;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(5) span:nth-child(4) {
+        background: #ff990020;
+        color: #ff9900;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(6) span:nth-child(3) {
+        background: #666f7e20;
+        color: #666f7e;
+        @include latest-sales-data-style;
+      }
+
+      &:nth-child(6) span:nth-child(4) {
+        background: #1f417320;
+        color: #1f4173;
+        @include latest-sales-data-style;
+      }
+    }
+  }
+}

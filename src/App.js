@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import SidebarContainer from "./components/Sidebar/SidebarContainer";
+
+import LatestSalesOrders from "./components/LatestSalesOrders/LatestSalesOrders";
+import TopSellingProducts from "./components/TopSellingProducts/TopSellingProducts";
+import PurchaseOrders from "./components/PurchaseOrders/PurchaseOrders";
+import Header from "./components/Header/Header";
+import TasksSummary from "./components/TasksSummary/TasksSummary";
+import ProductsSummary from "./components/ProductsSummary/ProductsSummary";
+import ActivityTitleWrapper from "./components/ActivityTitleWrapper/ActivityTitleWrapper.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <div className="left">
+        <SidebarContainer />
+      </div>
+      <div className="right">
+        <Header />
+        <main>
+          <section className="section-top">
+            <ActivityTitleWrapper />
+            <TasksSummary />
+          </section>
+          <section className="section-center">
+            <ProductsSummary />
+          </section>
+          <section className="section-bottom">
+            <LatestSalesOrders />
+            <PurchaseOrders />
+            <TopSellingProducts />
+          </section>
+        </main>
+      </div>
     </div>
   );
 }

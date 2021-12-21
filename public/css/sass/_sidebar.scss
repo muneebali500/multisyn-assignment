@@ -1,0 +1,84 @@
+.sidebar {
+  width: 20.9rem;
+
+  &__logo {
+    font-size: 3.2rem;
+    color: #0043f1;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+    width: 4.2rem;
+    height: 4rem;
+    background-color: blue;
+    border: none;
+    outline: none;
+
+    i {
+      color: #fff;
+      font-size: 2rem;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__menu {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    list-style-type: none;
+
+    &--item {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 2rem 1.5rem 3rem;
+      position: relative;
+
+      &-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+
+        i {
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      &-name {
+        font-size: 1.4rem;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &-dropBtn {
+        @include dropDownBtn;
+      }
+    }
+  }
+}
+
+// conditional class will be applied to the sidebar item selected
+.active {
+  border-radius: 3.7rem 0 0 3.7rem;
+  background: #f5f7fb;
+
+  h3 {
+    color: #003ad2;
+  }
+
+  span {
+    i {
+      color: #003ad2;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.5rem;
+    transform: translateY(-50%);
+    width: 1.6rem;
+    height: 3rem;
+    background-color: blue;
+  }
+}

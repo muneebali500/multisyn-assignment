@@ -1,0 +1,49 @@
+@import "./mixins";
+
+.tasks-summary {
+  @include flex-between;
+}
+
+.tasks-card {
+  width: 39rem;
+  height: 13.7rem;
+  border-radius: 2rem;
+  padding: 2.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+
+  &:nth-child(1) {
+    background: linear-gradient(89.69deg, #f39034 2.03%, #ff2727 99.73%);
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(270deg, #003ad2 0%, #0097ec 100%);
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(270.23deg, #00a843 0.19%, #1fd071 99.8%);
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(269.97deg, #5900c9 0.02%, #9852f0 99.98%);
+  }
+
+  &__top {
+    @include flex-between;
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__middle {
+    font-size: 3.5rem;
+  }
+
+  &__bottom {
+    @include flex-between;
+  }
+}
